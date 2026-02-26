@@ -6,16 +6,6 @@
 
 ---
 
-## 🚀 Despliegue en 1-Clic (Web App Pública)
-
-¿Quieres compartir este bot o revisarlo desde tu celular sin dejar tu PC encendida? Haz clic en el siguiente botón para desplegar tu propio servidor web gratuito en Render. En 3 minutos **obtendrás un enlace (URL web) permanente** que abrirá directamente el Dashboard interactivo:
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nicco6482/Bot-de-Arbitraje-Cripto)
-
-*Render detectará automáticamente que es una aplicación Python/Flask gracias al archivo `Procfile` y la iniciará sola en la nube.*
-
----
-
 ## 🌟 Características Principales
 
 1. **Detección de Arbitraje Triangular:** Escanea múltiples exchanges (Binance, Coinbase, Kraken, KuCoin, Bybit) simultáneamente para detectar spreads de precios viables descontando comisiones pre-configuradas.
