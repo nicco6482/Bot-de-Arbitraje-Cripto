@@ -32,5 +32,39 @@
     "sentiment_label": "NEUTRAL",
     "risk_multiplier": 1.0,
     "mode": "simulation"
+  },
+  {
+    "timestamp": "2026-02-26T01:09:27.940709",
+    "coin": "bitcoin",
+    "buy_exchange": "kucoin",
+    "sell_exchange": "bybit",
+    "buy_price": 67208.45,
+    "sell_price": 68211.27,
+    "capital_used": 512.26,
+    "gross_profit_usd": 7.64,
+    "fees_paid_usd": 2.06,
+    "net_profit_usd": 5.58,
+    "net_profit_pct": 1.0891,
+    "sentiment_score": 0.0272,
+    "sentiment_label": "NEUTRAL",
+    "risk_multiplier": 1.0,
+    "mode": "simulation"
+  },
+  {
+    "timestamp": "2026-02-26T01:11:25.069800",
+    "coin": "ripple",
+    "buy_exchange": "binance",
+    "sell_exchange": "kraken",
+    "buy_price": 1.41,
+    "sell_price": 1.45,
+    "capital_used": 618.06,
+    "gross_profit_usd": 17.53,
+    "fees_paid_usd": 2.51,
+    "net_profit_usd": 15.03,
+    "net_profit_pct": 2.4312,
+    "sentiment_score": 0.2195,
+    "sentiment_label": "BULLISH",
+    "risk_multiplier": 1.2,
+    "mode": "simulation"
   }
 ]

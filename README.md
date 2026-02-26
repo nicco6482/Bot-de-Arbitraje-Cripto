@@ -6,13 +6,13 @@
 
 ---
 
-## 🚀 Probar Demo en Vivo (Desde el Navegador)
+## 🚀 Demo Independiente (1-Click Run)
 
-Puedes ejecutar este bot directamente en la nube sin instalar nada en tu computadora usando cualquiera de las siguientes opciones gratuitas:
+Prueba el bot en un entorno de servidor aislado y seguro directamente desde tu navegador sin configurar nada:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nicco6482/Bot-de-Arbitraje-Cripto)
+[![Run on Repl.it](https://replit.com/badge/github/nicco6482/Bot-de-Arbitraje-Cripto)](https://replit.com/github/nicco6482/Bot-de-Arbitraje-Cripto)
 
-*Al abrir el entorno, simplemente escribe `python monitor.py` en la terminal que aparecerá en la parte inferior de la pantalla.*
+*Al hacer clic, Replit clonará el proyecto en un servidor privado independiente e instalará automáticamente todo lo necesario. Solo dale al botón verde de "Run" en la parte superior.*
 
 ---
 

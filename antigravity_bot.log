@@ -254,3 +254,446 @@ AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
 00:54:54 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 2): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
 00:54:57 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 3): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
 00:55:03 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+01:03:35 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:03:35 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:03:35 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:03:35 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:03:35 [AntiGravity.MLPredictor] INFO: Sin datos históricos aún. Ejecuta el bot un rato primero.
+01:03:35 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:03:35 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:03:35 [AntiGravity.Monitor] INFO: 🔄 CICLO #1 | 2026-02-26 01:03:35
+01:03:35 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:03:36 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:03:36 [AntiGravity.Monitor] INFO: 📊 Market Overview (Top 5 coins por market cap):
+01:03:36 [AntiGravity.Monitor] INFO:    🟢 BTC    | $   67,783.00 | +5.82% 24h
+01:03:36 [AntiGravity.Monitor] INFO:    🟢 ETH    | $    2,050.59 | +10.81% 24h
+01:03:36 [AntiGravity.Monitor] INFO:    🟢 USDT   | $        1.00 | +0.00% 24h
+01:03:36 [AntiGravity.Monitor] INFO:    🟢 XRP    | $        1.43 | +6.36% 24h
+01:03:36 [AntiGravity.Monitor] INFO:    🟢 BNB    | $      628.27 | +7.62% 24h
+01:03:39 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:03:39 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,783.00 (+5.82% 24h)
+01:03:39 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:03:41 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:03:41 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   kucoin      : $   67,764.00
+   coinbase    : $   67,859.00
+   bybit       : $   67,888.00
+   binance     : $   67,897.00
+   kraken      : $   67,944.00
+   → Spread total: 0.266%
+01:03:41 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 BITCOIN | Score: -0.030 | Tweets: 101 | NEUTRAL
+01:03:41 [AntiGravity.Monitor] INFO:   😐🟡 BITCOIN | Score: -0.030 | Tweets: 101 | NEUTRAL
+01:03:42 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:03:42 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,050.59 (+10.81% 24h)
+01:03:42 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:03:43 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:03:43 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   kucoin      : $    2,048.82
+   bybit       : $    2,048.82
+   kraken      : $    2,050.19
+   coinbase    : $    2,051.10
+   binance     : $    2,055.44
+   → Spread total: 0.323%
+01:03:43 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 ETHEREUM | Score: +0.631 | Tweets: 92 | BULLISH
+01:03:43 [AntiGravity.Monitor] INFO:   🚀🟢 ETHEREUM | Score: +0.631 | Tweets: 92 | BULLISH
+01:03:45 [AntiGravity.Monitor] INFO: 
+🔍 Analizando SOLANA...
+01:03:45 [AntiGravity.Monitor] INFO:   💰 Precio global: $87.93 (+11.19% 24h)
+01:03:45 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de solana (1 llamada para 5 exchanges)...
+01:03:46 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:03:46 [AntiGravity.Monitor] INFO: 
+💰 Precios de SOLANA:
+   bybit       : $       87.87
+   coinbase    : $       87.91
+   kucoin      : $       87.92
+   binance     : $       88.03
+   kraken      : $       88.05
+   → Spread total: 0.205%
+01:03:46 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 SOLANA | Score: +0.355 | Tweets: 73 | BULLISH
+01:03:46 [AntiGravity.Monitor] INFO:   🚀🟢 SOLANA | Score: +0.355 | Tweets: 73 | BULLISH
+01:03:48 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BINANCECOIN...
+01:03:48 [AntiGravity.Monitor] INFO:   💰 Precio global: $628.27 (+7.62% 24h)
+01:03:48 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
+01:03:48 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:04:03 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:04:33 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:05:33 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/binancecoin/tickers
+01:05:33 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:05:33 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para binancecoin. Activando fallback a precios simulados...
+01:05:33 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para binancecoin: {'binance': 626.63, 'coinbase': 624.48, 'kraken': 636.58, 'kucoin': 620.11, 'bybit': 619.17}
+01:05:33 [AntiGravity.Monitor] INFO: 
+💰 Precios de BINANCECOIN:
+   bybit       : $      619.17
+   kucoin      : $      620.11
+   coinbase    : $      624.48
+   binance     : $      626.63
+   kraken      : $      636.58
+   → Spread total: 2.812%
+01:05:33 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 BINANCECOIN | Score: +0.086 | Tweets: 102 | NEUTRAL
+01:05:33 [AntiGravity.Monitor] INFO:   😐🟡 BINANCECOIN | Score: +0.086 | Tweets: 102 | NEUTRAL
+01:05:33 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: BINANCECOIN
+  🟢 COMPRAR en bybit     : $619.17
+  🔴 VENDER en  kraken    : $636.58
+  📊 Spread bruto:  +2.812%
+  💵 Spread neto:   +2.412% (después de ~0.4% en fees)
+  💰 Profit estimado: $24.12 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:05:33 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: BINANCECOIN
+  🟢 COMPRAR en bybit     : $619.17
+  🔴 VENDER en  kraken    : $636.58
+  📊 Spread bruto:  +2.812%
+  💵 Spread neto:   +2.412% (después de ~0.4% en fees)
+  💰 Profit estimado: $24.12 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:05:33 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | BINANCECOIN
+   Compra en bybit @ $619.17
+   Venta en  kraken @ $636.58
+   Capital: $550.00 | Profit neto: $+13.23 (+2.406%)
+   Sentimiento: NEUTRAL (+0.086) | Risk mult: x1.10
+01:05:33 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:05:35 [AntiGravity.Monitor] INFO: 
+🔍 Analizando RIPPLE...
+01:05:35 [AntiGravity.Monitor] INFO:   💰 Precio global: $1.43 (+6.35% 24h)
+01:05:35 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ripple (1 llamada para 5 exchanges)...
+01:05:36 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:05:36 [AntiGravity.Monitor] INFO: 
+💰 Precios de RIPPLE:
+   binance     : $        1.43
+   coinbase    : $        1.43
+   kucoin      : $        1.43
+   bybit       : $        1.43
+   kraken      : $        1.43
+   → Spread total: 0.000%
+01:05:36 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 RIPPLE | Score: -0.149 | Tweets: 106 | NEUTRAL
+01:05:36 [AntiGravity.Monitor] INFO:   😐🟡 RIPPLE | Score: -0.149 | Tweets: 106 | NEUTRAL
+01:05:37 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 122.9s. Próximo en 0s...
+01:05:37 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:05:37 [AntiGravity.Monitor] INFO: 🔄 CICLO #2 | 2026-02-26 01:05:37
+01:05:37 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:05:38 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:05:39 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:05:39 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,858.00 (+5.94% 24h)
+01:05:39 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:05:41 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:05:41 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   bybit       : $   67,753.00
+   coinbase    : $   67,753.00
+   binance     : $   67,791.00
+   kraken      : $   67,841.00
+   kucoin      : $   67,905.00
+   → Spread total: 0.224%
+01:05:41 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 BITCOIN | Score: -0.085 | Tweets: 101 | NEUTRAL
+01:05:41 [AntiGravity.Monitor] INFO:   😐🟡 BITCOIN | Score: -0.085 | Tweets: 101 | NEUTRAL
+01:05:42 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:05:42 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,052.51 (+10.91% 24h)
+01:05:42 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:05:43 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:05:43 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   kucoin      : $    2,048.82
+   bybit       : $    2,048.82
+   kraken      : $    2,050.19
+   coinbase    : $    2,051.10
+   binance     : $    2,055.44
+   → Spread total: 0.323%
+01:05:43 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 ETHEREUM | Score: +0.222 | Tweets: 75 | BULLISH
+01:05:43 [AntiGravity.Monitor] INFO:   🚀🟢 ETHEREUM | Score: +0.222 | Tweets: 75 | BULLISH
+01:05:45 [AntiGravity.Monitor] INFO: 
+🔍 Analizando SOLANA...
+01:05:45 [AntiGravity.Monitor] INFO:   💰 Precio global: $87.98 (+11.25% 24h)
+01:05:45 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de solana (1 llamada para 5 exchanges)...
+01:05:45 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:06:00 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:06:30 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:07:30 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/solana/tickers
+01:07:30 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:07:30 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para solana. Activando fallback a precios simulados...
+01:07:30 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para solana: {'binance': 86.96, 'coinbase': 89.25, 'kraken': 87.89, 'kucoin': 88.98, 'bybit': 87.35}
+01:07:30 [AntiGravity.Monitor] INFO: 
+💰 Precios de SOLANA:
+   binance     : $       86.96
+   bybit       : $       87.35
+   kraken      : $       87.89
+   kucoin      : $       88.98
+   coinbase    : $       89.25
+   → Spread total: 2.633%
+01:07:30 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 SOLANA | Score: -0.154 | Tweets: 80 | NEUTRAL
+01:07:30 [AntiGravity.Monitor] INFO:   😐🟡 SOLANA | Score: -0.154 | Tweets: 80 | NEUTRAL
+01:07:30 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: SOLANA
+  🟢 COMPRAR en binance   : $86.96
+  🔴 VENDER en  coinbase  : $89.25
+  📊 Spread bruto:  +2.633%
+  💵 Spread neto:   +2.233% (después de ~0.4% en fees)
+  💰 Profit estimado: $22.33 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:07:30 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: SOLANA
+  🟢 COMPRAR en binance   : $86.96
+  🔴 VENDER en  coinbase  : $89.25
+  📊 Spread bruto:  +2.633%
+  💵 Spread neto:   +2.233% (después de ~0.4% en fees)
+  💰 Profit estimado: $22.33 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:07:30 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | SOLANA
+   Compra en binance @ $86.96
+   Venta en  coinbase @ $89.25
+   Capital: $506.62 | Profit neto: $+11.29 (+2.228%)
+   Sentimiento: NEUTRAL (-0.154) | Risk mult: x1.00
+01:07:30 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:07:32 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BINANCECOIN...
+01:07:32 [AntiGravity.Monitor] INFO:   💰 Precio global: $628.46 (+7.70% 24h)
+01:07:32 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
+01:07:35 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:07:35 [AntiGravity.Monitor] INFO: 
+💰 Precios de BINANCECOIN:
+   kraken      : $      627.98
+   bybit       : $      628.05
+   kucoin      : $      628.24
+   binance     : $      628.80
+   coinbase    : $      628.80
+   → Spread total: 0.131%
+01:07:35 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 BINANCECOIN | Score: +0.274 | Tweets: 141 | BULLISH
+01:07:35 [AntiGravity.Monitor] INFO:   🚀🟢 BINANCECOIN | Score: +0.274 | Tweets: 141 | BULLISH
+01:07:37 [AntiGravity.Monitor] INFO: 
+🔍 Analizando RIPPLE...
+01:07:37 [AntiGravity.Monitor] INFO:   💰 Precio global: $1.43 (+6.30% 24h)
+01:07:37 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ripple (1 llamada para 5 exchanges)...
+01:07:38 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:07:38 [AntiGravity.Monitor] INFO: 
+💰 Precios de RIPPLE:
+   binance     : $        1.43
+   coinbase    : $        1.43
+   kucoin      : $        1.43
+   bybit       : $        1.43
+   kraken      : $        1.43
+   → Spread total: 0.000%
+01:07:38 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 RIPPLE | Score: +0.032 | Tweets: 125 | NEUTRAL
+01:07:38 [AntiGravity.Monitor] INFO:   😐🟡 RIPPLE | Score: +0.032 | Tweets: 125 | NEUTRAL
+01:07:39 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 121.8s. Próximo en 0s...
+01:07:39 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:07:39 [AntiGravity.Monitor] INFO: 🔄 CICLO #3 | 2026-02-26 01:07:39
+01:07:39 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:07:40 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:07:40 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:07:40 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,855.00 (+5.92% 24h)
+01:07:40 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:07:42 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:07:57 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:08:27 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:09:27 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/bitcoin/tickers
+01:09:27 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:09:27 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para bitcoin. Activando fallback a precios simulados...
+01:09:27 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para bitcoin: {'binance': 67704.9, 'coinbase': 67767.51, 'kraken': 67646.57, 'kucoin': 67208.45, 'bybit': 68211.27}
+01:09:27 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   kucoin      : $   67,208.45
+   kraken      : $   67,646.57
+   binance     : $   67,704.90
+   coinbase    : $   67,767.51
+   bybit       : $   68,211.27
+   → Spread total: 1.492%
+01:09:27 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 BITCOIN | Score: +0.027 | Tweets: 71 | NEUTRAL
+01:09:27 [AntiGravity.Monitor] INFO:   😐🟡 BITCOIN | Score: +0.027 | Tweets: 71 | NEUTRAL
+01:09:27 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: BITCOIN
+  🟢 COMPRAR en kucoin    : $67,208.45
+  🔴 VENDER en  bybit     : $68,211.27
+  📊 Spread bruto:  +1.492%
+  💵 Spread neto:   +1.092% (después de ~0.4% en fees)
+  💰 Profit estimado: $10.92 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:09:27 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: BITCOIN
+  🟢 COMPRAR en kucoin    : $67,208.45
+  🔴 VENDER en  bybit     : $68,211.27
+  📊 Spread bruto:  +1.492%
+  💵 Spread neto:   +1.092% (después de ~0.4% en fees)
+  💰 Profit estimado: $10.92 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:09:27 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | BITCOIN
+   Compra en kucoin @ $67,208.45
+   Venta en  bybit @ $68,211.27
+   Capital: $512.26 | Profit neto: $+5.58 (+1.089%)
+   Sentimiento: NEUTRAL (+0.027) | Risk mult: x1.00
+01:09:27 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:09:29 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:09:29 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,052.92 (+10.95% 24h)
+01:09:29 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:09:30 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:09:30 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   bybit       : $    2,058.69
+   coinbase    : $    2,058.90
+   kraken      : $    2,058.94
+   binance     : $    2,059.03
+   kucoin      : $    2,059.12
+   → Spread total: 0.021%
+01:09:30 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 ETHEREUM | Score: +0.306 | Tweets: 22 | BULLISH
+01:09:30 [AntiGravity.Monitor] INFO:   🚀🟢 ETHEREUM | Score: +0.306 | Tweets: 22 | BULLISH
+01:09:31 [AntiGravity.Monitor] INFO: 
+🔍 Analizando SOLANA...
+01:09:31 [AntiGravity.Monitor] INFO:   💰 Precio global: $88.01 (+11.44% 24h)
+01:09:31 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de solana (1 llamada para 5 exchanges)...
+01:09:32 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:09:32 [AntiGravity.Monitor] INFO: 
+💰 Precios de SOLANA:
+   kucoin      : $       88.42
+   binance     : $       88.48
+   bybit       : $       88.61
+   kraken      : $       88.67
+   coinbase    : $       88.69
+   → Spread total: 0.305%
+01:09:32 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 SOLANA | Score: -0.193 | Tweets: 30 | NEUTRAL
+01:09:32 [AntiGravity.Monitor] INFO:   😐🟡 SOLANA | Score: -0.193 | Tweets: 30 | NEUTRAL
+01:09:34 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BINANCECOIN...
+01:09:34 [AntiGravity.Monitor] INFO:   💰 Precio global: $628.28 (+7.67% 24h)
+01:09:34 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
+01:09:37 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:09:37 [AntiGravity.Monitor] INFO: 
+💰 Precios de BINANCECOIN:
+   bybit       : $      630.04
+   kucoin      : $      630.37
+   kraken      : $      630.38
+   coinbase    : $      630.48
+   binance     : $      630.77
+   → Spread total: 0.116%
+01:09:37 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 BINANCECOIN | Score: +0.574 | Tweets: 50 | BULLISH
+01:09:37 [AntiGravity.Monitor] INFO:   🚀🟢 BINANCECOIN | Score: +0.574 | Tweets: 50 | BULLISH
+01:09:39 [AntiGravity.Monitor] INFO: 
+🔍 Analizando RIPPLE...
+01:09:39 [AntiGravity.Monitor] INFO:   💰 Precio global: $1.43 (+6.23% 24h)
+01:09:39 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ripple (1 llamada para 5 exchanges)...
+01:09:39 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:09:54 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:10:24 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:11:24 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/ripple/tickers
+01:11:24 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:11:24 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para ripple. Activando fallback a precios simulados...
+01:11:25 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para ripple: {'binance': 1.41, 'coinbase': 1.42, 'kraken': 1.45, 'kucoin': 1.45, 'bybit': 1.42}
+01:11:25 [AntiGravity.Monitor] INFO: 
+💰 Precios de RIPPLE:
+   binance     : $        1.41
+   coinbase    : $        1.42
+   bybit       : $        1.42
+   kraken      : $        1.45
+   kucoin      : $        1.45
+   → Spread total: 2.837%
+01:11:25 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 RIPPLE | Score: +0.220 | Tweets: 54 | BULLISH
+01:11:25 [AntiGravity.Monitor] INFO:   🚀🟢 RIPPLE | Score: +0.220 | Tweets: 54 | BULLISH
+01:11:25 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: RIPPLE
+  🟢 COMPRAR en binance   : $1.41
+  🔴 VENDER en  kraken    : $1.45
+  📊 Spread bruto:  +2.837%
+  💵 Spread neto:   +2.437% (después de ~0.4% en fees)
+  💰 Profit estimado: $24.37 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:11:25 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: RIPPLE
+  🟢 COMPRAR en binance   : $1.41
+  🔴 VENDER en  kraken    : $1.45
+  📊 Spread bruto:  +2.837%
+  💵 Spread neto:   +2.437% (después de ~0.4% en fees)
+  💰 Profit estimado: $24.37 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:11:25 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | RIPPLE
+   Compra en binance @ $1.41
+   Venta en  kraken @ $1.45
+   Capital: $618.06 | Profit neto: $+15.03 (+2.431%)
+   Sentimiento: BULLISH (+0.220) | Risk mult: x1.20
+01:11:25 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:11:26 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 226.9s. Próximo en 0s...
+01:11:26 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:11:26 [AntiGravity.Monitor] INFO: 🔄 CICLO #4 | 2026-02-26 01:11:26
+01:11:26 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:11:27 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:11:27 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:11:27 [AntiGravity.Monitor] INFO:   💰 Precio global: $68,036.00 (+6.34% 24h)
+01:11:27 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:11:29 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:11:29 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   kraken      : $   67,973.00
+   coinbase    : $   67,978.00
+   bybit       : $   67,981.00
+   kucoin      : $   67,991.00
+   binance     : $   67,993.00
+   → Spread total: 0.029%
+01:11:29 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 BITCOIN | Score: +0.358 | Tweets: 138 | BULLISH
+01:11:29 [AntiGravity.Monitor] INFO:   🚀🟢 BITCOIN | Score: +0.358 | Tweets: 138 | BULLISH
+01:11:31 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:11:31 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,062.30 (+11.57% 24h)
+01:11:31 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:11:32 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:11:32 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   kraken      : $    2,058.94
+   kucoin      : $    2,062.44
+   coinbase    : $    2,062.80
+   bybit       : $    2,062.85
+   binance     : $    2,063.70
+   → Spread total: 0.231%
+01:11:32 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 💀🔴 ETHEREUM | Score: -0.322 | Tweets: 16 | BEARISH
+01:11:32 [AntiGravity.Monitor] INFO:   💀🔴 ETHEREUM | Score: -0.322 | Tweets: 16 | BEARISH
+01:11:33 [AntiGravity.Monitor] INFO: 
+🔍 Analizando SOLANA...
+01:11:33 [AntiGravity.Monitor] INFO:   💰 Precio global: $88.35 (+11.95% 24h)
+01:11:33 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de solana (1 llamada para 5 exchanges)...
+01:11:35 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:11:35 [AntiGravity.Monitor] INFO: 
+💰 Precios de SOLANA:
+   kucoin      : $       88.54
+   binance     : $       88.64
+   bybit       : $       88.64
+   kraken      : $       88.67
+   coinbase    : $       88.69
+   → Spread total: 0.169%
+01:11:35 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 SOLANA | Score: +0.173 | Tweets: 22 | NEUTRAL
+01:11:35 [AntiGravity.Monitor] INFO:   😐🟡 SOLANA | Score: +0.173 | Tweets: 22 | NEUTRAL
+01:11:36 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BINANCECOIN...
+01:11:36 [AntiGravity.Monitor] INFO:   💰 Precio global: $630.59 (+8.05% 24h)
+01:11:36 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
+01:11:37 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:11:52 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
