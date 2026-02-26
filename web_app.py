@@ -80,16 +80,46 @@ def get_bot_status():
         except Exception:
             pass
 
-    # 3. Extraer los últimos logs para la terminal
+    # 3. Leer los datos más recientes de Precios desde el logger
+    # Vamos a extraer los spreads de precios reportados en el log
+    # para armar unas "Tarjetas" visuales en el frontend.
+    market_data = {}
     logs = []
     if os.path.exists("antigravity_bot.log"):
         try:
             with open("antigravity_bot.log", "r", encoding="utf-8") as f:
-                # Leer las últimas 50 líneas
                 lines = f.readlines()
-                logs = [line.strip() for line in lines[-50:]]
-        except Exception:
-            pass
+                # Extraer log de terminal (últimas 40)
+                logs = [line.strip() for line in lines[-40:]]
+                
+                # Parsear los precios más recientes para pasarlos estructurados a la UI
+                # Buscamos bloques de "💰 Precios de COIN:" y Extraemos el spread
+                current_coin = None
+                for line in reversed(lines[-200:]): # Buscar hacia atrás en los últimos 200 logs
+                    if "Precios de " in line:
+                        current_coin = line.split("Precios de ")[1].replace(":", "").strip().lower()
+                        if current_coin not in market_data:
+                            market_data[current_coin] = {"exchanges": {}, "spread": 0}
+                    elif current_coin and "→ Spread total:" in line:
+                        if market_data[current_coin]["spread"] == 0:
+                            spread_str = line.split(":")[-1].replace("%", "").strip()
+                            try:
+                                market_data[current_coin]["spread"] = float(spread_str)
+                            except: pass
+                    elif current_coin and ":" in line and "$" in line and "Spread" not in line:
+                        # '   binance     : $   67,897.00'
+                        parts = line.split(":")
+                        if len(parts) >= 3:  # Tiene timestamp, modulo, etc
+                            ex_data = parts[-1].split("$")
+                            if len(ex_data) == 2:
+                                exchange = parts[-2].split()[-1].strip()
+                                price_str = ex_data[1].replace(",", "").strip()
+                                try:
+                                    if exchange not in market_data[current_coin]["exchanges"]:
+                                        market_data[current_coin]["exchanges"][exchange] = float(price_str)
+                                except: pass
+        except Exception as e:
+            print("Error parsing logs:", e)
 
     # 4. Configuración activa
     active_config = {
@@ -103,6 +133,7 @@ def get_bot_status():
         "cycle": cycle,
         "config": active_config,
         "recent_trades": trades,
+        "market_data": market_data,
         "logs": logs
     })
 

@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalOutput = document.getElementById('terminal-output');
     const cycleCount = document.getElementById('cycle-count');
     const thresholdVal = document.getElementById('threshold-val');
-    const activeCoinsDiv = document.getElementById('active-coins');
     const tradesContainer = document.getElementById('trades-container');
+    const marketGrid = document.getElementById('market-grid');
 
     let isRunning = false;
     let pollInterval = null;
@@ -108,10 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cycleCount.innerText = String(data.cycle).padStart(3, '0');
         thresholdVal.innerText = `${data.config.threshold}%`;
 
-        if (activeCoinsDiv.children.length !== data.config.coins.length) {
-            activeCoinsDiv.innerHTML = data.config.coins.map(
-                c => `<span class="px-2 py-1 bg-cyber-border text-[10px] font-bold tracking-widest uppercase rounded text-[#8abcff]">${c}</span>`
-            ).join('');
+        // 3. Render Market UI Cards (New Visual Feature)
+        if (data.market_data && Object.keys(data.market_data).length > 0) {
+            renderMarketGrid(data.market_data, data.config.threshold);
         }
 
         // 3. Render Trades (Ledger)
@@ -126,6 +125,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderLogs(data.logs);
                 lastLogCount = data.logs.length;
             }
+        }
+    }
+
+    function renderMarketGrid(marketData, threshold) {
+        let html = '';
+
+        for (const [coin, info] of Object.entries(marketData)) {
+            const spread = info.spread || 0;
+            const exchanges = info.exchanges || {};
+            const exNames = Object.keys(exchanges);
+
+            if (exNames.length === 0) continue;
+
+            // Find Min and Max Exch
+            let minEx = exNames[0], maxEx = exNames[0];
+            for (const ex of exNames) {
+                if (exchanges[ex] < exchanges[minEx]) minEx = ex;
+                if (exchanges[ex] > exchanges[maxEx]) maxEx = ex;
+            }
+            const minPrice = exchanges[minEx];
+            const maxPrice = exchanges[maxEx];
+
+            // Visual logic
+            const isViable = spread >= threshold;
+            const borderColor = isViable ? 'border-cyber-green shadow-[0_0_15px_rgba(0,255,102,0.2)]' : 'border-cyber-border';
+            const spreadColor = isViable ? 'text-cyber-green font-bold' : 'text-gray-400';
+            const progressColor = isViable ? 'bg-cyber-green' : 'bg-cyber-accent';
+            const progressWidth = Math.min(100, Math.max(5, (spread / threshold) * 50)); // Visual fill
+
+            html += `
+                <div class="bg-[#0f0f13] border ${borderColor} rounded p-4 relative overflow-hidden transition-all duration-500">
+                    <div class="flex justify-between items-center mb-3">
+                        <h4 class="font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-brands fa-${coin === 'bitcoin' ? 'btc' : coin === 'ethereum' ? 'ethereum' : 'galactic-republic'} text-cyber-accent opacity-80"></i> 
+                            ${coin}
+                        </h4>
+                        <span class="${spreadColor} px-2 py-0.5 rounded bg-black/50 text-xs tracking-wider">${spread.toFixed(3)}% SPREAD</span>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-black h-1.5 rounded-full mb-4 overflow-hidden">
+                        <div class="${progressColor} h-full transition-all duration-1000" style="width: ${progressWidth}%"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+                        <div class="p-2 bg-cyber-green/10 border border-cyber-green/20 rounded">
+                            <p class="text-gray-500 mb-1 leading-none uppercase text-[9px]"><i class="fa-solid fa-arrow-down mr-1"></i> Buy at ${minEx}</p>
+                            <p class="text-cyber-green font-bold text-sm">$${minPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        </div>
+                        <div class="p-2 bg-cyber-red/10 border border-cyber-red/20 rounded">
+                            <p class="text-gray-500 mb-1 leading-none uppercase text-[9px]"><i class="fa-solid fa-arrow-up mr-1"></i> Sell at ${maxEx}</p>
+                            <p class="text-cyber-red font-bold text-sm">$${maxPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        if (html) {
+            marketGrid.innerHTML = html;
         }
     }
 

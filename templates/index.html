@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
+
     <!-- Configuración para el modo oscuro Neon -->
     <script>
         tailwind.config = {
@@ -34,7 +35,9 @@
         }
     </script>
 </head>
-<body class="bg-cyber-bg text-cyber-text font-sans min-h-screen flex flex-col selection:bg-cyber-accent selection:text-black">
+
+<body
+    class="bg-cyber-bg text-cyber-text font-sans min-h-screen flex flex-col selection:bg-cyber-accent selection:text-black">
 
     <!-- Navbar -->
     <nav class="border-b border-cyber-border bg-cyber-panel/50 backdrop-blur-md sticky top-0 z-50">
@@ -44,19 +47,23 @@
                 <div class="flex items-center gap-3">
                     <i class="fa-brands fa-space-awesome text-cyber-accent text-2xl animate-pulse"></i>
                     <span class="font-bold text-xl tracking-widest text-white">ANTIGRAVITY</span>
-                    <span class="px-2 py-0.5 rounded-full bg-cyber-border text-xs text-gray-400 font-mono tracking-wider ml-2">v2.0</span>
+                    <span
+                        class="px-2 py-0.5 rounded-full bg-cyber-border text-xs text-gray-400 font-mono tracking-wider ml-2">v2.0</span>
                 </div>
 
                 <!-- Controles -->
                 <div class="flex items-center gap-6">
                     <!-- Status Badge -->
-                    <div id="status-badge" class="flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-border/50 border border-cyber-border transition-colors duration-300">
+                    <div id="status-badge"
+                        class="flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-border/50 border border-cyber-border transition-colors duration-300">
                         <div id="status-dot" class="w-2 h-2 rounded-full bg-gray-500"></div>
-                        <span id="status-text" class="text-xs font-mono font-medium tracking-wide">STATUS: OFFLINE</span>
+                        <span id="status-text" class="text-xs font-mono font-medium tracking-wide">STATUS:
+                            OFFLINE</span>
                     </div>
 
                     <!-- Power Button -->
-                    <button id="power-btn" class="group relative px-6 py-2 bg-cyber-panel border-2 border-cyber-accent text-cyber-accent font-bold tracking-widest rounded transition-all duration-300 hover:bg-cyber-accent hover:text-black hover:shadow-[0_0_15px_rgba(0,240,255,0.5)]">
+                    <button id="power-btn"
+                        class="group relative px-6 py-2 bg-cyber-panel border-2 border-cyber-accent text-cyber-accent font-bold tracking-widest rounded transition-all duration-300 hover:bg-cyber-accent hover:text-black hover:shadow-[0_0_15px_rgba(0,240,255,0.5)]">
                         <span id="power-icon" class="mr-2"><i class="fa-solid fa-power-off"></i></span>
                         <span id="power-text">START ENGINE</span>
                     </button>
@@ -67,49 +74,60 @@
 
     <!-- Main Dashboard -->
     <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-6">
-        
+
         <!-- Columna Izquierda: Data & Trades -->
         <div class="lg:col-span-4 flex flex-col gap-6">
-            
+
             <!-- System Stats Card -->
             <div class="cyber-card p-5">
-                <h3 class="text-sm uppercase tracking-widest text-gray-400 mb-4 border-b border-cyber-border pb-2"><i class="fa-solid fa-microchip mr-2"></i> System Telemetry</h3>
+                <h3 class="text-sm uppercase tracking-widest text-gray-400 mb-4 border-b border-cyber-border pb-2"><i
+                        class="fa-solid fa-microchip mr-2"></i> Core Telemetry</h3>
                 <div class="grid grid-cols-2 gap-4 font-mono text-sm">
                     <div>
                         <p class="text-gray-500 text-xs">CYCLES</p>
                         <p id="cycle-count" class="text-2xl font-bold text-cyber-accent">000</p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-xs">THRESHOLD</p>
+                        <p class="text-gray-500 text-xs">TARGET PROFIT</p>
                         <p id="threshold-val" class="text-2xl font-bold text-white">--</p>
-                    </div>
-                    <div class="col-span-2 mt-2">
-                        <p class="text-gray-500 text-xs mb-1">ACTIVE TARGETS</p>
-                        <div id="active-coins" class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-cyber-border text-xs rounded text-gray-300">--</span>
-                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Ledger / Recent Trades -->
-            <div class="cyber-card p-5 flex-1 flex flex-col min-h-[300px]">
-                <h3 class="text-sm uppercase tracking-widest text-gray-400 mb-4 border-b border-cyber-border pb-2"><i class="fa-solid fa-money-bill-transfer mr-2"></i> Execution Ledger</h3>
+            <div class="cyber-card p-5 flex-1 flex flex-col min-h-[400px]">
+                <h3 class="text-sm uppercase tracking-widest text-cyber-green mb-4 border-b border-cyber-border pb-2"><i
+                        class="fa-solid fa-money-bill-transfer mr-2"></i> Live Executions</h3>
                 <div id="trades-container" class="flex-1 overflow-y-auto pr-2 space-y-3 font-mono text-xs">
-                    
                     <div class="text-center text-gray-500 italic mt-10">
                         <i class="fa-solid fa-radar fa-spin text-2xl mb-2 opacity-30"></i>
                         <p>Waiting for arbitrage targets...</p>
                     </div>
-
                 </div>
             </div>
 
         </div>
 
-        <!-- Columna Derecha: Terminal -->
-        <div class="lg:col-span-8 flex flex-col h-[700px]">
-            <div class="cyber-card p-0 flex-1 flex flex-col overflow-hidden relative border border-cyber-border shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+        <!-- Columna Derecha: Market Dashboard & Terminal -->
+        <div class="lg:col-span-8 flex flex-col gap-6">
+
+            <!-- Visual Market Grid (New) -->
+            <div class="cyber-card p-5">
+                <h3 class="text-sm uppercase tracking-widest text-cyber-accent mb-4 border-b border-cyber-border pb-2">
+                    <i class="fa-solid fa-chart-line mr-2"></i> Live Market Intel
+                </h3>
+                <div id="market-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Tarjetas generadas dinámicamente aquí -->
+                    <div class="col-span-full text-center py-8 text-gray-500 font-mono text-sm animate-pulse">
+                        <i class="fa-brands fa-space-awesome text-3xl mb-3 opacity-50 block"></i>
+                        Awaiting market data streams...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terminal -->
+            <div
+                class="cyber-card p-0 flex-1 flex flex-col overflow-hidden relative border border-cyber-border min-h-[300px]">
                 <!-- Mac-like Header -->
                 <div class="bg-cyber-panel border-b border-cyber-border px-4 py-2 flex items-center justify-between">
                     <div class="flex gap-2">
@@ -117,19 +135,22 @@
                         <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                         <div class="w-3 h-3 rounded-full bg-cyber-green/80"></div>
                     </div>
-                    <span class="text-xs font-mono text-gray-500">root@antigravity:~</span>
+                    <span class="text-xs font-mono text-gray-500">root@antigravity:~/logs</span>
                     <div class="w-12"></div> <!-- Spacer for center alignment -->
                 </div>
-                
+
                 <!-- Terminal Output -->
-                <div id="terminal-output" class="p-4 flex-1 overflow-y-auto font-mono text-[13px] leading-relaxed bg-[#050505] text-[#a9b1d6] space-y-1">
+                <div id="terminal-output"
+                    class="p-4 flex-1 overflow-y-auto font-mono text-[13px] leading-relaxed bg-[#050505] text-[#a9b1d6] space-y-1">
                     <div class="text-cyber-accent">Initializing secure connection to AntiGravity Core...</div>
                     <div class="text-cyber-green">Connection established. V2.0 Ready.</div>
                     <div class="text-gray-500">Waiting for engine start signal...</div>
                 </div>
 
                 <!-- Animación de escaneo (Scanline) -->
-                <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,240,255,0.02)_50%)] bg-[length:100%_4px] opacity-50"></div>
+                <div
+                    class="pointer-events-none absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,240,255,0.02)_50%)] bg-[length:100%_4px] opacity-50">
+                </div>
             </div>
         </div>
 
@@ -137,4 +158,5 @@
 
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
+
 </html>
