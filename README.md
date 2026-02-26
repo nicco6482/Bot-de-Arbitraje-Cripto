@@ -6,13 +6,13 @@
 
 ---
 
-## 🚀 Probar Demo Inmediata (Sin Crear Cuentas)
+## 🚀 Despliegue en 1-Clic (Web App Pública)
 
-Prueba el bot interactivo en **Google Colab** en un servidor web gratuito de Google. **No necesitas registrarte en ningún lado nuevo**, utiliza tu cuenta de Google de toda la vida:
+¿Quieres compartir este bot o revisarlo desde tu celular sin dejar tu PC encendida? Haz clic en el siguiente botón para desplegar tu propio servidor web gratuito en Render. En 3 minutos **obtendrás un enlace (URL web) permanente** que abrirá directamente el Dashboard interactivo:
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicco6482/Bot-de-Arbitraje-Cripto/blob/main/demo.ipynb)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nicco6482/Bot-de-Arbitraje-Cripto)
 
-*Nota: Una vez abierto el enlace, simplemente ve al menú superior de Colab y selecciona **Entorno de ejecución > Ejecutar todo** (Runtime > Run All). El bot se instalará y comenzará a rastrear los exchanges en la misma página.*
+*Render detectará automáticamente que es una aplicación Python/Flask gracias al archivo `Procfile` y la iniciará sola en la nube.*
 
 ---
 
