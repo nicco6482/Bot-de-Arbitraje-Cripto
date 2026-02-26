@@ -8,12 +8,11 @@
 
 ## 🚀 Probar Demo Inmediata (Sin Crear Cuentas)
 
-Prueba el bot en **Google Colab** en un servidor gratuito de Google. **No necesitas registrarte en ningún lado nuevo** (solo estar logueado en tu cuenta normal de Google/Gmail):
+Prueba el bot interactivo en **Google Colab** en un servidor web gratuito de Google. **No necesitas registrarte en ningún lado nuevo**, utiliza tu cuenta de Google de toda la vida:
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicco6482/Bot-de-Arbitraje-Cripto/blob/main/monitor.py)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicco6482/Bot-de-Arbitraje-Cripto/blob/main/demo.ipynb)
 
-*Nota: Una vez en Colab, clona este repositorio en la primera celda copiando y pegando:* 
-`!git clone https://github.com/nicco6482/Bot-de-Arbitraje-Cripto.git && cd Bot-de-Arbitraje-Cripto && pip install -r requirements.txt && python monitor.py`
+*Nota: Una vez abierto el enlace, simplemente ve al menú superior de Colab y selecciona **Entorno de ejecución > Ejecutar todo** (Runtime > Run All). El bot se instalará y comenzará a rastrear los exchanges en la misma página.*
 
 ---
 
