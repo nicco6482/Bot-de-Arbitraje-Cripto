@@ -1804,3 +1804,223 @@ AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
   P&L Total: $+106.57 (+10.66%)
 ══════════════════════════════════════════════════
 01:29:05 [AntiGravity.Monitor] INFO: ═══════════════════════════════════════════════════════
+01:31:09 [AntiGravity.Monitor] INFO: 
+⚠️ Señal de interrupción recibida. Cerrando bot...
+01:31:43 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:31:43 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:31:43 [AntiGravity.Simulator] INFO: 📂 Cargados 13 trades previos. Capital actual: $1,130.34
+01:31:43 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:31:43 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:31:43 [AntiGravity.MLPredictor] INFO: Datos insuficientes: 55/60 muestras. Sigue corriendo el bot para acumular más datos.
+01:31:43 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:31:43 [werkzeug] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+01:31:43 [werkzeug] INFO: [33mPress CTRL+C to quit[0m
+01:32:08 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:08] "GET / HTTP/1.1" 200 -
+01:32:08 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+01:32:08 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:08] "GET /static/main.js HTTP/1.1" 200 -
+01:32:08 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:08] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:16 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:16] "GET / HTTP/1.1" 200 -
+01:32:16 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+01:32:16 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:16] "[36mGET /static/main.js HTTP/1.1[0m" 304 -
+01:32:16 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:16] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:28 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:28] "POST /api/bot/start HTTP/1.1" 200 -
+01:32:28 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:32:28 [AntiGravity.Monitor] INFO: 🔄 CICLO #3 | 2026-02-26 01:32:28
+01:32:28 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:32:29 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:29] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:29 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:32:29 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:32:29 [AntiGravity.Monitor] INFO:   💰 Precio global: $68,389.00 (+6.91% 24h)
+01:32:29 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:32:30 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:30] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:32 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:32:32 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   bybit       : $   68,332.00
+   kraken      : $   68,333.00
+   kucoin      : $   68,425.00
+   coinbase    : $   68,426.00
+   binance     : $   68,432.00
+   → Spread total: 0.146%
+01:32:32 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 💀🔴 BITCOIN | Score: -0.281 | Tweets: 112 | BEARISH
+01:32:32 [AntiGravity.Monitor] INFO:   💀🔴 BITCOIN | Score: -0.281 | Tweets: 112 | BEARISH
+01:32:32 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:32] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:33 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:32:33 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,069.74 (+11.93% 24h)
+01:32:33 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:32:33 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:33] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:34 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:32:34 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   kucoin      : $    2,069.95
+   bybit       : $    2,070.22
+   binance     : $    2,070.38
+   kraken      : $    2,070.52
+   coinbase    : $    2,071.31
+   → Spread total: 0.066%
+01:32:34 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 ETHEREUM | Score: -0.004 | Tweets: 133 | NEUTRAL
+01:32:34 [AntiGravity.Monitor] INFO:   😐🟡 ETHEREUM | Score: -0.004 | Tweets: 133 | NEUTRAL
+01:32:35 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:35] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:36 [AntiGravity.Monitor] INFO: 
+🔍 Analizando SOLANA...
+01:32:36 [AntiGravity.Monitor] INFO:   💰 Precio global: $89.03 (+12.93% 24h)
+01:32:36 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de solana (1 llamada para 5 exchanges)...
+01:32:36 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:36] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:37 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:32:37 [AntiGravity.Monitor] INFO: 
+💰 Precios de SOLANA:
+   kucoin      : $       88.97
+   binance     : $       89.01
+   kraken      : $       89.01
+   coinbase    : $       89.05
+   bybit       : $       89.07
+   → Spread total: 0.112%
+01:32:37 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 SOLANA | Score: +0.426 | Tweets: 121 | BULLISH
+01:32:37 [AntiGravity.Monitor] INFO:   🚀🟢 SOLANA | Score: +0.426 | Tweets: 121 | BULLISH
+01:32:38 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:38] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:38 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BINANCECOIN...
+01:32:38 [AntiGravity.Monitor] INFO:   💰 Precio global: $632.22 (+8.50% 24h)
+01:32:38 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
+01:32:39 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:32:39 [AntiGravity.Monitor] INFO: 
+💰 Precios de BINANCECOIN:
+   bybit       : $      632.35
+   coinbase    : $      632.64
+   kucoin      : $      632.65
+   binance     : $      632.82
+   kraken      : $      633.28
+   → Spread total: 0.147%
+01:32:39 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 BINANCECOIN | Score: +0.215 | Tweets: 143 | BULLISH
+01:32:39 [AntiGravity.Monitor] INFO:   🚀🟢 BINANCECOIN | Score: +0.215 | Tweets: 143 | BULLISH
+01:32:39 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:39] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:40 [AntiGravity.Monitor] INFO: 
+🔍 Analizando RIPPLE...
+01:32:40 [AntiGravity.Monitor] INFO:   💰 Precio global: $1.44 (+7.36% 24h)
+01:32:40 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ripple (1 llamada para 5 exchanges)...
+01:32:41 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:41] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:41 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
+01:32:42 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:42] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:44 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:44] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:45 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:45] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:47 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:47] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:48 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:48] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:50 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:50] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:51 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:51] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:53 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:53] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:54 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:54] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:56 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:56] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:56 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:32:57 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:57] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:59 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:59] "POST /api/bot/stop HTTP/1.1" 200 -
+01:32:59 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:59] "GET /api/bot/status HTTP/1.1" 200 -
+01:32:59 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:32:59] "GET /api/bot/status HTTP/1.1" 200 -
+01:33:26 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:34:26 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/ripple/tickers
+01:34:26 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:34:26 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para ripple. Activando fallback a precios simulados...
+01:34:26 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para ripple: {'binance': 1.43, 'coinbase': 1.44, 'kraken': 1.44, 'kucoin': 1.42, 'bybit': 1.43}
+01:34:26 [AntiGravity.Monitor] INFO: 
+💰 Precios de RIPPLE:
+   kucoin      : $        1.42
+   binance     : $        1.43
+   bybit       : $        1.43
+   coinbase    : $        1.44
+   kraken      : $        1.44
+   → Spread total: 1.408%
+01:34:26 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 RIPPLE | Score: +0.084 | Tweets: 119 | NEUTRAL
+01:34:26 [AntiGravity.Monitor] INFO:   😐🟡 RIPPLE | Score: +0.084 | Tweets: 119 | NEUTRAL
+01:34:26 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: RIPPLE
+  🟢 COMPRAR en kucoin    : $1.42
+  🔴 VENDER en  coinbase  : $1.44
+  📊 Spread bruto:  +1.409%
+  💵 Spread neto:   +1.008% (después de ~0.4% en fees)
+  💰 Profit estimado: $10.08 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:34:26 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: RIPPLE
+  🟢 COMPRAR en kucoin    : $1.42
+  🔴 VENDER en  coinbase  : $1.44
+  📊 Spread bruto:  +1.409%
+  💵 Spread neto:   +1.008% (después de ~0.4% en fees)
+  💰 Profit estimado: $10.08 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:34:26 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | RIPPLE
+   Compra en kucoin @ $1.42
+   Venta en  coinbase @ $1.44
+   Capital: $553.28 | Profit neto: $+5.56 (+1.006%)
+   Sentimiento: NEUTRAL (+0.084) | Risk mult: x1.00
+01:34:26 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:34:28 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 119.4s. Próximo en 1s...
+01:34:28 [AntiGravity.Monitor] INFO: 
+═══════════════════════════════════════════════════════
+01:34:28 [AntiGravity.Monitor] INFO:   🛬 BOT DETENIDO
+01:34:28 [AntiGravity.Monitor] INFO:   ⏱️  Runtime: 10.3 minutos
+01:34:28 [AntiGravity.Monitor] INFO:   🔄 Ciclos completados: 3
+01:34:28 [AntiGravity.Simulator] INFO: 
+══════════════════════════════════════════════════
+  📈 PERFORMANCE SUMMARY
+  Trades: 12 | Win Rate: 100.0%
+  Capital: $1,000.00 → $1,112.13
+  P&L Total: $+112.13 (+11.21%)
+══════════════════════════════════════════════════
+01:34:28 [AntiGravity.Monitor] INFO: ═══════════════════════════════════════════════════════
+01:45:27 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:45:27] "HEAD /api/bot/status HTTP/1.1" 200 -
+01:45:27 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:45:27] "GET /api/bot/status HTTP/1.1" 200 -
+01:46:54 [AntiGravity.Monitor] INFO: 
+⚠️ Señal de interrupción recibida. Cerrando bot...
+01:47:18 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:47:18 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:47:18 [AntiGravity.Simulator] INFO: 📂 Cargados 14 trades previos. Capital actual: $1,135.90
+01:47:18 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:47:18 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:47:18 [AntiGravity.MLPredictor] INFO: 🤖 Modelo entrenado! Accuracy: 72.7% (con 55 muestras)
+01:47:18 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:47:18 [werkzeug] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+01:47:18 [werkzeug] INFO: [33mPress CTRL+C to quit[0m
+01:48:00 [AntiGravity.Monitor] INFO: 
+⚠️ Señal de interrupción recibida. Cerrando bot...
+01:49:25 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:49:25 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:49:25 [AntiGravity.Simulator] INFO: 📂 Cargados 14 trades previos. Capital actual: $1,135.90
+01:49:25 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:49:25 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:49:25 [AntiGravity.MLPredictor] INFO: 🤖 Modelo entrenado! Accuracy: 72.7% (con 55 muestras)
+01:49:25 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:49:25 [werkzeug] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+01:49:25 [werkzeug] INFO: [33mPress CTRL+C to quit[0m
+01:49:51 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:49:51 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:49:51 [AntiGravity.Simulator] INFO: 📂 Cargados 14 trades previos. Capital actual: $1,135.90
+01:49:51 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:49:51 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:49:51 [AntiGravity.MLPredictor] INFO: 🤖 Modelo entrenado! Accuracy: 72.7% (con 55 muestras)
+01:49:51 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:49:51 [werkzeug] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+01:49:51 [werkzeug] INFO: [33mPress CTRL+C to quit[0m
+01:52:32 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:52:32] "GET /api/bot/status?t=1 HTTP/1.1" 200 -
+01:52:43 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:52:43] "HEAD /api/bot/status?t=999 HTTP/1.1" 200 -
+01:52:43 [werkzeug] INFO: 127.0.0.1 - - [26/Feb/2026 01:52:43] "GET /api/bot/status?t=999 HTTP/1.1" 200 -
+01:56:00 [AntiGravity.Monitor] INFO: Inicializando módulos...
+01:56:00 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+01:56:00 [AntiGravity.Simulator] INFO: 📂 Cargados 14 trades previos. Capital actual: $1,135.90
+01:56:00 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+01:56:00 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+01:56:00 [AntiGravity.MLPredictor] INFO: 🤖 Modelo entrenado! Accuracy: 72.7% (con 55 muestras)
+01:56:00 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+01:56:00 [werkzeug] INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+01:56:00 [werkzeug] INFO: [33mPress CTRL+C to quit[0m

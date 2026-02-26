@@ -219,5 +219,22 @@
     "sentiment_label": "BEARISH",
     "risk_multiplier": 0.7,
     "mode": "simulation"
+  },
+  {
+    "timestamp": "2026-02-26T01:34:26.621015",
+    "coin": "ripple",
+    "buy_exchange": "kucoin",
+    "sell_exchange": "coinbase",
+    "buy_price": 1.42,
+    "sell_price": 1.44,
+    "capital_used": 553.28,
+    "gross_profit_usd": 7.79,
+    "fees_paid_usd": 2.23,
+    "net_profit_usd": 5.56,
+    "net_profit_pct": 1.0056,
+    "sentiment_score": 0.0837,
+    "sentiment_label": "NEUTRAL",
+    "risk_multiplier": 1.0,
+    "mode": "simulation"
   }
 ]
