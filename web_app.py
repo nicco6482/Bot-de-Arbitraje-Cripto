@@ -93,23 +93,25 @@ def get_bot_status():
                 logs = [line.strip() for line in lines[-40:]]
                 
                 # Parsear los precios más recientes para pasarlos estructurados a la UI
-                # Buscamos bloques de "💰 Precios de COIN:" y Extraemos el spread
                 current_coin = None
-                for line in reversed(lines[-200:]): # Buscar hacia atrás en los últimos 200 logs
+                for line in lines[-300:]: # Buscar cronológicamente
                     if "Precios de " in line:
-                        current_coin = line.split("Precios de ")[1].replace(":", "").strip().lower()
-                        if current_coin not in market_data:
-                            market_data[current_coin] = {"exchanges": {}, "spread": 0}
+                        try:
+                            current_coin = line.split("Precios de ")[1].replace(":", "").strip().lower()
+                            if current_coin not in market_data:
+                                market_data[current_coin] = {"exchanges": {}, "spread": 0}
+                        except: pass
                     elif current_coin and "→ Spread total:" in line:
-                        if market_data[current_coin]["spread"] == 0:
-                            spread_str = line.split(":")[-1].replace("%", "").strip()
-                            try:
-                                market_data[current_coin]["spread"] = float(spread_str)
-                            except: pass
+                        spread_str = line.split(":")[-1].replace("%", "").strip()
+                        try:
+                            # Puede tener caracteres invisibles o comas, limpiamos un poco
+                            spread_clean = ''.join(c for c in spread_str if c.isdigit() or c == '.')
+                            market_data[current_coin]["spread"] = float(spread_clean)
+                        except: pass
                     elif current_coin and ":" in line and "$" in line and "Spread" not in line:
                         # '   binance     : $   67,897.00'
                         parts = line.split(":")
-                        if len(parts) >= 3:  # Tiene timestamp, modulo, etc
+                        if len(parts) >= 2:  # Las líneas de precios no tienen timestamp, así que solo tienen 1 dos-puntos
                             ex_data = parts[-1].split("$")
                             if len(ex_data) == 2:
                                 exchange = parts[-2].split()[-1].strip()
