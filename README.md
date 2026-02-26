@@ -6,6 +6,16 @@
 
 ---
 
+## 🚀 Probar Demo Inmediata (Sin Crear Cuentas)
+
+Prueba el bot interactivo en **Google Colab** en un servidor web gratuito de Google. **No necesitas registrarte en ningún lado nuevo**, utiliza tu cuenta de Google de toda la vida:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicco6482/Bot-de-Arbitraje-Cripto/blob/main/demo.ipynb)
+
+*Nota: Una vez abierto el enlace, simplemente ve al menú superior de Colab y selecciona **Entorno de ejecución > Ejecutar todo** (Runtime > Run All). El bot se instalará y comenzará a rastrear los exchanges en la misma página.*
+
+---
+
 ## 🌟 Características Principales
 
 1. **Detección de Arbitraje Triangular:** Escanea múltiples exchanges (Binance, Coinbase, Kraken, KuCoin, Bybit) simultáneamente para detectar spreads de precios viables descontando comisiones pre-configuradas.
