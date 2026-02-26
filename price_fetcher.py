@@ -302,12 +302,20 @@ class PriceFetcher:
 
         if base_price is None:
             base_data = self.get_price_simple([coin_id])
-            if not base_data or coin_id not in base_data:
-                return {}
-            base_price = base_data[coin_id].get("usd", 0)
+            if base_data and coin_id in base_data:
+                base_price = base_data[coin_id].get("usd", 0)
 
         if not base_price:
-            return {}
+            logger.warning(f"⚠️ Imposible obtener precio base de la API para {coin_id}. Usando precio de emergencia.")
+            # Fallback de emergencia extremo si CoinGecko nos banea por completo
+            fallback_prices = {
+                "bitcoin": 68000.0,
+                "ethereum": 2000.0,
+                "solana": 85.0,
+                "binancecoin": 620.0,
+                "ripple": 1.40
+            }
+            base_price = fallback_prices.get(coin_id, 100.0)
 
         simulated = {}
         for exchange in TRADING.exchanges:
