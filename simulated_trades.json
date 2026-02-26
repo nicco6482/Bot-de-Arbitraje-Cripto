@@ -66,5 +66,22 @@
     "sentiment_label": "BULLISH",
     "risk_multiplier": 1.2,
     "mode": "simulation"
+  },
+  {
+    "timestamp": "2026-02-26T01:13:22.354645",
+    "coin": "binancecoin",
+    "buy_exchange": "kraken",
+    "sell_exchange": "bybit",
+    "buy_price": 623.06,
+    "sell_price": 630.62,
+    "capital_used": 522.56,
+    "gross_profit_usd": 6.34,
+    "fees_paid_usd": 2.1,
+    "net_profit_usd": 4.24,
+    "net_profit_pct": 0.8109,
+    "sentiment_score": 0.0491,
+    "sentiment_label": "NEUTRAL",
+    "risk_multiplier": 1.0,
+    "mode": "simulation"
   }
 ]

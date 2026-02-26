@@ -697,3 +697,96 @@ AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
 01:11:36 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de binancecoin (1 llamada para 5 exchanges)...
 01:11:37 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 1/3. Esperando 15s antes de reintentar...
 01:11:52 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 2/3. Esperando 30s antes de reintentar...
+01:12:22 [AntiGravity.PriceFetcher] WARNING: ⏳ Rate limit (429) en intento 3/3. Esperando 60s antes de reintentar...
+01:13:22 [AntiGravity.PriceFetcher] ERROR: ❌ Fallo definitivo tras 3 intentos: https://api.coingecko.com/api/v3/coins/binancecoin/tickers
+01:13:22 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 0/5 exchanges
+01:13:22 [AntiGravity.PriceFetcher] WARNING: ⚠️ Solo 0 exchange(s) con datos reales para binancecoin. Activando fallback a precios simulados...
+01:13:22 [AntiGravity.PriceFetcher] INFO: 🎭 Precios SIMULADOS para binancecoin: {'binance': 625.15, 'coinbase': 626.16, 'kraken': 623.06, 'kucoin': 627.14, 'bybit': 630.62}
+01:13:22 [AntiGravity.Monitor] INFO: 
+💰 Precios de BINANCECOIN:
+   kraken      : $      623.06
+   binance     : $      625.15
+   coinbase    : $      626.16
+   kucoin      : $      627.14
+   bybit       : $      630.62
+   → Spread total: 1.213%
+01:13:22 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 😐🟡 BINANCECOIN | Score: +0.049 | Tweets: 56 | NEUTRAL
+01:13:22 [AntiGravity.Monitor] INFO:   😐🟡 BINANCECOIN | Score: +0.049 | Tweets: 56 | NEUTRAL
+01:13:22 [AntiGravity.Arbitrage] INFO: 🎯 OPORTUNIDAD DETECTADA: 
+=======================================================
+  💎 ARBITRAJE: BINANCECOIN
+  🟢 COMPRAR en kraken    : $623.06
+  🔴 VENDER en  bybit     : $630.62
+  📊 Spread bruto:  +1.213%
+  💵 Spread neto:   +0.813% (después de ~0.4% en fees)
+  💰 Profit estimado: $8.13 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:13:22 [AntiGravity.Monitor] INFO: 
+  
+=======================================================
+  💎 ARBITRAJE: BINANCECOIN
+  🟢 COMPRAR en kraken    : $623.06
+  🔴 VENDER en  bybit     : $630.62
+  📊 Spread bruto:  +1.213%
+  💵 Spread neto:   +0.813% (después de ~0.4% en fees)
+  💰 Profit estimado: $8.13 (sobre $1000)
+  ✅ VIABLE
+=======================================================
+01:13:22 [AntiGravity.Simulator] INFO: 💰 TRADE SIMULADO | BINANCECOIN
+   Compra en kraken @ $623.06
+   Venta en  bybit @ $630.62
+   Capital: $522.56 | Profit neto: $+4.24 (+0.811%)
+   Sentimiento: NEUTRAL (+0.049) | Risk mult: x1.00
+01:13:22 [AntiGravity.Notifier] INFO: ALERTA: Oportunidad de Arbitraje
+01:13:23 [AntiGravity.Monitor] INFO: 
+🔍 Analizando RIPPLE...
+01:13:23 [AntiGravity.Monitor] INFO:   💰 Precio global: $1.43 (+6.38% 24h)
+01:13:23 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ripple (1 llamada para 5 exchanges)...
+01:13:24 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:13:24 [AntiGravity.Monitor] INFO: 
+💰 Precios de RIPPLE:
+   binance     : $        1.44
+   coinbase    : $        1.44
+   kucoin      : $        1.44
+   bybit       : $        1.44
+   kraken      : $        1.44
+   → Spread total: 0.000%
+01:13:24 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 💀🔴 RIPPLE | Score: -0.504 | Tweets: 108 | BEARISH
+01:13:24 [AntiGravity.Monitor] INFO:   💀🔴 RIPPLE | Score: -0.504 | Tweets: 108 | BEARISH
+01:13:26 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 119.8s. Próximo en 0s...
+01:13:26 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+01:13:26 [AntiGravity.Monitor] INFO: 🔄 CICLO #5 | 2026-02-26 01:13:26
+01:13:26 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+01:13:27 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+01:13:27 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+01:13:27 [AntiGravity.Monitor] INFO:   💰 Precio global: $68,077.00 (+6.40% 24h)
+01:13:27 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de bitcoin (1 llamada para 5 exchanges)...
+01:13:29 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:13:29 [AntiGravity.Monitor] INFO: 
+💰 Precios de BITCOIN:
+   kucoin      : $   68,022.00
+   kraken      : $   68,023.00
+   coinbase    : $   68,045.00
+   bybit       : $   68,076.00
+   binance     : $   68,135.00
+   → Spread total: 0.166%
+01:13:29 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 BITCOIN | Score: +0.598 | Tweets: 79 | BULLISH
+01:13:29 [AntiGravity.Monitor] INFO:   🚀🟢 BITCOIN | Score: +0.598 | Tweets: 79 | BULLISH
+01:13:31 [AntiGravity.Monitor] INFO: 
+🔍 Analizando ETHEREUM...
+01:13:31 [AntiGravity.Monitor] INFO:   💰 Precio global: $2,064.21 (+11.67% 24h)
+01:13:31 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo tickers de ethereum (1 llamada para 5 exchanges)...
+01:13:32 [AntiGravity.PriceFetcher] INFO:   → Precios reales obtenidos: 5/5 exchanges
+01:13:32 [AntiGravity.Monitor] INFO: 
+💰 Precios de ETHEREUM:
+   kraken      : $    2,058.94
+   kucoin      : $    2,062.44
+   coinbase    : $    2,062.80
+   bybit       : $    2,062.85
+   binance     : $    2,063.70
+   → Spread total: 0.231%
+01:13:32 [AntiGravity.Sentiment] INFO: Sentimiento SIMULADO → 🚀🟢 ETHEREUM | Score: +0.332 | Tweets: 58 | BULLISH
+01:13:32 [AntiGravity.Monitor] INFO:   🚀🟢 ETHEREUM | Score: +0.332 | Tweets: 58 | BULLISH

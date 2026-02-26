@@ -6,13 +6,14 @@
 
 ---
 
-## 🚀 Demo Independiente (1-Click Run)
+## 🚀 Probar Demo Inmediata (Sin Crear Cuentas)
 
-Prueba el bot en un entorno de servidor aislado y seguro directamente desde tu navegador sin configurar nada:
+Prueba el bot en **Google Colab** en un servidor gratuito de Google. **No necesitas registrarte en ningún lado nuevo** (solo estar logueado en tu cuenta normal de Google/Gmail):
 
-[![Run on Repl.it](https://replit.com/badge/github/nicco6482/Bot-de-Arbitraje-Cripto)](https://replit.com/github/nicco6482/Bot-de-Arbitraje-Cripto)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/nicco6482/Bot-de-Arbitraje-Cripto/blob/main/monitor.py)
 
-*Al hacer clic, Replit clonará el proyecto en un servidor privado independiente e instalará automáticamente todo lo necesario. Solo dale al botón verde de "Run" en la parte superior.*
+*Nota: Una vez en Colab, clona este repositorio en la primera celda copiando y pegando:* 
+`!git clone https://github.com/nicco6482/Bot-de-Arbitraje-Cripto.git && cd Bot-de-Arbitraje-Cripto && pip install -r requirements.txt && python monitor.py`
 
 ---
 
