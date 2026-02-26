@@ -1,0 +1,36 @@
+[
+  {
+    "timestamp": "2026-02-26T01:05:33.964380",
+    "coin": "binancecoin",
+    "buy_exchange": "bybit",
+    "sell_exchange": "kraken",
+    "buy_price": 619.17,
+    "sell_price": 636.58,
+    "capital_used": 550.0,
+    "gross_profit_usd": 15.47,
+    "fees_paid_usd": 2.23,
+    "net_profit_usd": 13.23,
+    "net_profit_pct": 2.4062,
+    "sentiment_score": 0.0859,
+    "sentiment_label": "NEUTRAL",
+    "risk_multiplier": 1.1,
+    "mode": "simulation"
+  },
+  {
+    "timestamp": "2026-02-26T01:07:30.989887",
+    "coin": "solana",
+    "buy_exchange": "binance",
+    "sell_exchange": "coinbase",
+    "buy_price": 86.96,
+    "sell_price": 89.25,
+    "capital_used": 506.62,
+    "gross_profit_usd": 13.34,
+    "fees_paid_usd": 2.05,
+    "net_profit_usd": 11.29,
+    "net_profit_pct": 2.2281,
+    "sentiment_score": -0.1537,
+    "sentiment_label": "NEUTRAL",
+    "risk_multiplier": 1.0,
+    "mode": "simulation"
+  }
+]

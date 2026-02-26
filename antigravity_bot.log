@@ -1,0 +1,256 @@
+00:50:33 [AntiGravity.Sentiment] WARNING: tweepy no instalado. Usando sentimiento simulado.
+00:50:33 [AntiGravity.Sentiment] WARNING: textblob no instalado. Usando sentimiento simulado.
+00:50:35 [AntiGravity.MLPredictor] WARNING: scikit-learn/pandas/numpy no instalados. ML desactivado.
+00:50:35 [AntiGravity.Monitor] INFO: Inicializando módulos...
+00:50:35 [AntiGravity.Sentiment] INFO: Tweepy no disponible. Modo sentimiento simulado activado.
+00:50:35 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+00:50:35 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+00:50:35 [AntiGravity.MLPredictor] WARNING: ML no disponible (faltan librerías).
+00:50:35 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+00:50:35 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:50:35 [AntiGravity.Monitor] INFO: 🔄 CICLO #1 | 2026-02-26 00:50:35
+00:50:35 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:50:36 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:50:36 [AntiGravity.Monitor] INFO: 📊 Market Overview (Top 5 coins por market cap):
+00:50:37 [AntiGravity.Monitor] INFO:    🟢 BTC    | $   67,744.00 | +5.73% 24h
+00:50:37 [AntiGravity.Monitor] INFO:    🟢 ETH    | $    2,040.66 | +10.14% 24h
+00:50:37 [AntiGravity.Monitor] INFO:    🟢 USDT   | $        1.00 | +0.01% 24h
+00:50:37 [AntiGravity.Monitor] INFO:    🟢 XRP    | $        1.43 | +5.64% 24h
+00:50:37 [AntiGravity.Monitor] INFO:    🟢 BNB    | $      626.18 | +7.13% 24h
+00:50:37 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+00:50:37 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,744.00 (+5.73% 24h)
+00:50:37 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo precios de bitcoin en 5 exchanges...
+00:50:38 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 1): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:50:39 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 2): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:50:41 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:50:46 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:50:47 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:50:49 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:50:53 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:50:54 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:50:56 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:51:01 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:51:02 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:51:04 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:51:09 [AntiGravity.PriceFetcher] WARNING: ⚠️ Pocos exchanges con datos reales. Usando precio global con variaciones simuladas.
+00:51:09 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 1: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 185, in _run_cycle
+    exchange_prices = self.price_fetcher.get_all_exchange_prices(coin)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 155, in get_all_exchange_prices
+    prices = self._simulate_exchange_prices(coin_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 170, in _simulate_exchange_prices
+    base_data = self.get_price_simple([coin_id])
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.RateLimitError:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:51:09 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 33.5s. Próximo en 27s...
+00:51:35 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:51:35 [AntiGravity.Monitor] INFO: 🔄 CICLO #2 | 2026-02-26 00:51:35
+00:51:35 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:51:37 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:51:37 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 2: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Cbinancecoin%2Cripple&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 168, in _run_cycle
+    simple_prices = self.price_fetcher.get_price_simple(TRADING.coins)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.RateLimitError:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:51:37 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 1.7s. Próximo en 58s...
+00:51:50 [AntiGravity.Monitor] INFO: Inicializando módulos...
+00:51:50 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+00:51:50 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+00:51:50 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+00:51:50 [AntiGravity.MLPredictor] INFO: Sin datos históricos aún. Ejecuta el bot un rato primero.
+00:51:50 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+00:51:50 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:51:50 [AntiGravity.Monitor] INFO: 🔄 CICLO #1 | 2026-02-26 00:51:50
+00:51:50 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:51:53 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:51:53 [AntiGravity.Monitor] INFO: 📊 Market Overview (Top 5 coins por market cap):
+00:51:55 [AntiGravity.Monitor] INFO:    🟢 BTC    | $   67,816.00 | +5.84% 24h
+00:51:55 [AntiGravity.Monitor] INFO:    🟢 ETH    | $    2,042.26 | +10.22% 24h
+00:51:55 [AntiGravity.Monitor] INFO:    🟢 USDT   | $        1.00 | +0.01% 24h
+00:51:55 [AntiGravity.Monitor] INFO:    🟢 XRP    | $        1.43 | +5.66% 24h
+00:51:55 [AntiGravity.Monitor] INFO:    🟢 BNB    | $      626.35 | +7.16% 24h
+00:51:55 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 1: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Cbinancecoin%2Cripple&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 168, in _run_cycle
+    simple_prices = self.price_fetcher.get_price_simple(TRADING.coins)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.RateLimitError:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:51:55 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 5.3s. Próximo en 55s...
+00:52:35 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:52:35 [AntiGravity.Monitor] INFO: 🔄 CICLO #3 | 2026-02-26 00:52:35
+00:52:35 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:52:39 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:52:39 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 3: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Cbinancecoin%2Cripple&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 168, in _run_cycle
+    simple_prices = self.price_fetcher.get_price_simple(TRADING.coins)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.HTTPError as e:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:52:39 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 3.9s. Próximo en 56s...
+00:52:50 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:52:50 [AntiGravity.Monitor] INFO: 🔄 CICLO #2 | 2026-02-26 00:52:50
+00:52:50 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:52:55 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:52:55 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 2: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Cbinancecoin%2Cripple&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 168, in _run_cycle
+    simple_prices = self.price_fetcher.get_price_simple(TRADING.coins)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.HTTPError as e:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:52:55 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 4.9s. Próximo en 55s...
+00:52:55 [AntiGravity.Monitor] INFO: Inicializando módulos...
+00:52:55 [AntiGravity.Sentiment] WARNING: ⚠️ No hay Bearer Token de Twitter. Modo simulado.
+00:52:55 [AntiGravity.Notifier] INFO: 📡 Canales activos: ['console only']
+00:52:55 [AntiGravity.Notifier] INFO: ℹ️ Sin canales de notificación configurados. Solo logging a consola.
+00:52:55 [AntiGravity.MLPredictor] INFO: Sin datos históricos aún. Ejecuta el bot un rato primero.
+00:52:55 [AntiGravity.Monitor] INFO: ✅ Bot inicializado. Listo para cazar arbitraje.
+00:52:55 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:52:55 [AntiGravity.Monitor] INFO: 🔄 CICLO #1 | 2026-02-26 00:52:55
+00:52:55 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:52:58 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:52:58 [AntiGravity.Monitor] INFO: 📊 Market Overview (Top 5 coins por market cap):
+00:53:03 [AntiGravity.Monitor] INFO:    🟢 BTC    | $   67,848.00 | +5.89% 24h
+00:53:03 [AntiGravity.Monitor] INFO:    🟢 ETH    | $    2,043.77 | +10.31% 24h
+00:53:03 [AntiGravity.Monitor] INFO:    🟢 USDT   | $        1.00 | +0.00% 24h
+00:53:03 [AntiGravity.Monitor] INFO:    🟢 XRP    | $        1.43 | +5.73% 24h
+00:53:03 [AntiGravity.Monitor] INFO:    🟢 BNB    | $      626.67 | +7.22% 24h
+00:53:03 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+00:53:03 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,848.00 (+5.89% 24h)
+00:53:03 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo precios de bitcoin en 5 exchanges...
+00:53:04 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 1): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:53:05 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 2): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:53:07 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:53:12 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:53:13 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:53:15 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin
+00:53:20 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:53:21 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:53:23 [AntiGravity.PriceFetcher] WARNING: Error exchange huobi (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/huobi/tickers?coin_ids=bitcoin
+00:53:27 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 1): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:53:28 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:53:30 [AntiGravity.PriceFetcher] WARNING: Error exchange kucoin (intento 3): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kucoin/tickers?coin_ids=bitcoin
+00:53:35 [AntiGravity.PriceFetcher] WARNING: ⚠️ Pocos exchanges con datos reales. Usando precio global con variaciones simuladas.
+00:53:36 [AntiGravity.PriceFetcher] WARNING: Rate limit (429). Esperando 15s...
+00:53:50 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:53:50 [AntiGravity.Monitor] INFO: 🔄 CICLO #3 | 2026-02-26 00:53:50
+00:53:50 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:53:51 [AntiGravity.PriceFetcher] WARNING: Rate limit (429). Esperando 30s...
+00:53:53 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:53:53 [AntiGravity.Monitor] ERROR: ❌ Error en ciclo 3: module 'requests.exceptions' has no attribute 'RateLimitError'
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 57, in get_price_simple
+    response.raise_for_status()
+  File "C:\Users\nicon\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum%2Csolana%2Cbinancecoin%2Cripple&vs_currencies=usd&include_24hr_change=true&include_market_cap=true
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 113, in run
+    self._run_cycle()
+  File "C:\Users\nicon\OneDrive\Desktop\bot\monitor.py", line 168, in _run_cycle
+    simple_prices = self.price_fetcher.get_price_simple(TRADING.coins)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nicon\OneDrive\Desktop\bot\price_fetcher.py", line 61, in get_price_simple
+    except requests.exceptions.HTTPError as e:
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'requests.exceptions' has no attribute 'RateLimitError'
+00:53:53 [AntiGravity.Monitor] INFO: ⏱️ Ciclo completado en 3.2s. Próximo en 57s...
+00:54:22 [AntiGravity.PriceFetcher] WARNING: Rate limit (429). Esperando 45s...
+00:54:50 [AntiGravity.Monitor] INFO: 
+───────────────────────────────────────────────────────
+00:54:50 [AntiGravity.Monitor] INFO: 🔄 CICLO #4 | 2026-02-26 00:54:50
+00:54:50 [AntiGravity.Monitor] INFO: ───────────────────────────────────────────────────────
+00:54:52 [AntiGravity.Sentiment] INFO: 🔮 Fear & Greed Index: 11 (Extreme Fear)
+00:54:52 [AntiGravity.Monitor] INFO: 
+🔍 Analizando BITCOIN...
+00:54:52 [AntiGravity.Monitor] INFO:   💰 Precio global: $67,955.00 (+6.06% 24h)
+00:54:52 [AntiGravity.PriceFetcher] INFO: 📡 Obteniendo precios de bitcoin en 5 exchanges...
+00:54:53 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 1): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:54:54 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 2): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:54:57 [AntiGravity.PriceFetcher] WARNING: Error exchange coinbase (intento 3): 404 Client Error: Not Found for url: https://api.coingecko.com/api/v3/exchanges/coinbase/tickers?coin_ids=bitcoin
+00:55:03 [AntiGravity.PriceFetcher] WARNING: Error exchange kraken (intento 2): 429 Client Error: Too Many Requests for url: https://api.coingecko.com/api/v3/exchanges/kraken/tickers?coin_ids=bitcoin

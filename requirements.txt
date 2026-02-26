@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────────
+#  AntiGravity Crypto Hunter — Dependencias Python
+#  Instala todo con: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────
+
+# ── Core HTTP & APIs ──────────────────────────────────────────────
+requests>=2.31.0          # HTTP client universal
+aiohttp>=3.9.0            # Async HTTP (para versión async avanzada)
+
+# ── Crypto Exchange Data ──────────────────────────────────────────
+pycoingecko>=3.1.0        # CoinGecko API wrapper (precios, exchanges, market data)
+ccxt>=4.2.0               # Unified crypto exchange library (para trading real)
+
+# ── Twitter / X API ──────────────────────────────────────────────
+tweepy>=4.14.0            # Twitter API v2 client oficial
+
+# ── Análisis de Sentimiento (NLP) ─────────────────────────────────
+textblob>=0.17.1          # NLP simple para polaridad de texto
+vaderSentiment>=3.3.2     # VADER: mejor para sentimiento de redes sociales
+
+# ── Machine Learning ──────────────────────────────────────────────
+scikit-learn>=1.4.0       # Modelos ML: Logistic Regression, RandomForest, etc.
+numpy>=1.26.0             # Operaciones numéricas de alto rendimiento
+pandas>=2.2.0             # DataFrames para manejo de series de tiempo
+
+# ── Notificaciones ────────────────────────────────────────────────
+twilio>=8.12.0            # SMS y WhatsApp via Twilio (opcional)
+
+# ── Visualización & Dashboard ─────────────────────────────────────
+streamlit>=1.31.0         # Dashboard web interactivo (extensión futura)
+plotly>=5.18.0            # Gráficos interactivos de precios
+
+# ── Utilidades ────────────────────────────────────────────────────
+python-dotenv>=1.0.0      # Carga variables de entorno desde .env
+schedule>=1.2.0           # Programación de tareas avanzada (alternativa a sleep)
+rich>=13.7.0              # Output bonito en terminal (colores, tablas, progress)
