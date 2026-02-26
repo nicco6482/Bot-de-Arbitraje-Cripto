@@ -6,6 +6,16 @@
 
 ---
 
+## 🚀 Probar Demo en Vivo (Desde el Navegador)
+
+Puedes ejecutar este bot directamente en la nube sin instalar nada en tu computadora usando cualquiera de las siguientes opciones gratuitas:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nicco6482/Bot-de-Arbitraje-Cripto)
+
+*Al abrir el entorno, simplemente escribe `python monitor.py` en la terminal que aparecerá en la parte inferior de la pantalla.*
+
+---
+
 ## 🌟 Características Principales
 
 1. **Detección de Arbitraje Triangular:** Escanea múltiples exchanges (Binance, Coinbase, Kraken, KuCoin, Bybit) simultáneamente para detectar spreads de precios viables descontando comisiones pre-configuradas.
